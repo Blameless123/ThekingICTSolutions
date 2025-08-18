@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services - The King ICT Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Explore The King ICT Solutions services including electric fencing, CCTV installation, PC maintenance, graphic design, networking, web design and more." />
+  <style>
+    /* Styles specific to Services page */
+    main {
+      padding: 4rem 1rem 6rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 2.5rem;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgb(243 198 35 / 0.2);
+      overflow: hidden;
+      cursor: default;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      padding-bottom: 1.5rem;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgb(243 198 35 / 0.4);
+    }
+
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+    }
+
+    .service-card h3 {
+      margin: 1rem 0 0.5rem;
+      font-weight: 800;
+      color: #0a2d5a;
+      font-size: 1.5rem;
+    }
+
+    .service-card p {
+      font-weight: 600;
+      padding: 0 1rem;
+      color: #444;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+
+    /* Back to top button */
+    #back-to-top {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background: #f3c623;
+      color: #0a2d5a;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 28px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgb(243 198 35 / 0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    #back-to-top:hover {
+      background-color: #d6b41f;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .service-card img {
+        height: 140px;
+      }
+    }
+    .lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  cursor: pointer;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(243,198,35,0.9);
+  cursor: default;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #f3c623;
+  font-weight: 900;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+  cursor: pointer;
+}
+
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(243,198,35,0.9);
+  cursor: default;
+  position: relative;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: #f3c623;
+  font-weight: 900;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1600;
+  background: rgba(0,0,0,0.5);
+  padding: 0 10px;
+  border-radius: 8px;
+  line-height: 1;
+}
+
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo2.png" alt="The King ICT Solutions Logo" class="logo" />
+        <span>The King ICT Solutions</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation">☰</button>
+
+      <nav id="main-nav" class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link active">Services</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1 style="text-align:center; color:#0a2d5a; font-weight:900; margin-bottom:2rem;">Our Services</h1>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="fance.jpg" alt="Electric Fencing" />
+        <h3>Electric Fencing</h3>
+        <p>Secure your property with state-of-the-art electric fencing solutions.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="camera.jpg" alt="CCTV Installation" />
+        <h3>CCTV Installation</h3>
+        <p>Professional CCTV camera installation to monitor and protect your premises.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="maintain.jpg" alt="PC Maintenance" />
+        <h3>PC Maintenance</h3>
+        <p>Expert PC troubleshooting, repairs, and routine maintenance services.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="img.png" alt="Graphic Design" />
+        <h3>Graphic Design</h3>
+        <p>Creative graphic design services for branding, marketing, and more.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="images/networking.jpg" alt="Networking" />
+        <h3>Networking</h3>
+        <p>Reliable network setup and maintenance to keep you connected.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="imag.png" alt="Web Design & Development" />
+        <h3>Web Design & Development</h3>
+        <p>Modern, responsive website design and development tailored for your business.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="ictservices.jpg" alt="Other ICT Services" />
+        <h3>Other ICT Services</h3>
+        <p>Various other ICT support and solutions customized to your needs.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>The King ICT Solutions</strong>
+        <p>Phone: +255 768 824 182 • +255 762 081 418 • Email: info@thekingict.co.tz</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="copyright">
+      &copy; <span id="year"></span> The King ICT Solutions — All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Back to top button functionality
+    const backToTopBtn = document.getElementById('back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'flex';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Set copyright year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    document.querySelectorAll('.service-card img').forEach(img => {
+  img.style.cursor = 'pointer';  // Ongeza pointer cursor
+
+  img.addEventListener('click', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.querySelector('.lightbox-img');
+
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.style.display = 'flex';
+  });
+});
+
+// Funga lightbox kwa click kwenye close au background
+document.getElementById('lightbox').addEventListener('click', (e) => {
+  if (e.target.classList.contains('lightbox') || e.target.classList.contains('close')) {
+    e.currentTarget.style.display = 'none';
+  }
+});
+
+document.querySelectorAll('.service-card img').forEach(img => {
+  img.style.cursor = 'pointer';
+  img.addEventListener('click', () => {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.querySelector('.lightbox-img');
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.style.display = 'flex';
+  });
+});
+
+// Funga lightbox kwa kubofya close button au background
+const lightbox = document.getElementById('lightbox');
+const closeBtn = lightbox.querySelector('.close');
+
+closeBtn.addEventListener('click', () => {
+  lightbox.style.display = 'none';
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) {
+    lightbox.style.display = 'none';
+  }
+});
+
+  </script>
+
+  <!-- Lightbox overlay -->
+<div id="lightbox" class="lightbox" style="display:none;">
+  <span class="close">&times;</span>
+  <img class="lightbox-img" src="" alt="Full service image" />
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" style="display:none;">
+  <span class="close" title="Close Image">&times;</span>
+  <img class="lightbox-img" src="" alt="Full service image" />
+</div>
+
+</body>
+</html>

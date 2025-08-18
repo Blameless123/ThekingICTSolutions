@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us - The King ICT Solutions</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Contact The King ICT Solutions via phone, email, or WhatsApp. We're here to assist you with all your ICT needs." />
+</head>
+<script src="https://cdn.emailjs.com/sdk/3.2.0/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init('service_4vmagp4'); // badilisha na user ID yako
+  })();
+
+  window.onload = function() {
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(function() {
+          alert('Message sent successfully!');
+          document.getElementById('contact-form').reset();
+        }, function(error) {
+          alert('Failed to send message, please try again later.');
+          console.error('FAILED...', error);
+        });
+    });
+  };
+</script>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <img src="logo2.png" alt="The King ICT Solutions Logo" class="logo" />
+        <span>The King ICT Solutions</span>
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation">☰</button>
+
+      <nav id="main-nav" class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-info fade-in">
+      <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Reach out via phone, email, or WhatsApp.</p>
+
+        <div class="contact-methods">
+          <div class="contact-item">
+            <h2>Phone</h2>
+            <p>
+              <a href="tel:+255768824182">+255 768 824 183</a><br />
+              <a href="tel:+255762081418">+255 762 081 418</a>
+            </p>
+          </div>
+
+          <div class="contact-item">
+            <h2>Email</h2>
+            <p><a href="mailto:info@thekingict.co.tz">info@thekingict.co.tz</a></p>
+          </div>
+
+          <div class="contact-item">
+            <h2>WhatsApp</h2>
+            <p>
+              <a
+                href="https://wa.me/255768824183?text=Hello%20The%20King%20ICT%20Solutions%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Chat with +255 768 824 183</a
+              ><br />
+              <a
+                href="https://wa.me/255762081418?text=Hello%20The%20King%20ICT%20Solutions%2C%20I%20would%20like%20to%20inquire%20about%20your%20services."
+                target="_blank"
+                rel="noopener noreferrer"
+                >Chat with +255 762 081 418</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form fade-in">
+      <div class="container">
+        <h2>Send Us a Message</h2>
+        <form id="contact-form" class="form">
+  <label for="name">Name</label>
+  <input type="text" id="name" name="user_name" required placeholder="Your name" />
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="user_email" required placeholder="Your email" />
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" required placeholder="Write your message here..."></textarea>
+
+  <button type="submit" class="btn primary">Send Message</button>
+</form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>The King ICT Solutions</strong>
+        <p>Phone: +255 768 824 183 • +255 762 081 418 • Email: info@thekingict.co.tz</p>
+      </div>
+      <nav class="footer-nav">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="copyright">
+      &copy; <span id="year"></span> The King ICT Solutions — All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
